@@ -4,6 +4,21 @@ const data = require("./db/data");
 
 // Code to prompt user with menu using inquirer
 function mainMenu(){
+    inquirer.prompt({
+        message: "What would you like to do?: ",
+        type: "list",
+        choices: ["Add a Department/Role/Employee", "View Data", "Update Employee Data"],
+        name: "main"
+    }).then(response => {
+        switch(response.main){
+            case "Add a Department/Role/Employee":
+                return addToTable();
+            case "View Data":
+                return viewData();
+            case "Update Employee Data":
+                return updateEmployee();
+        }
+    })
 
 }
 
