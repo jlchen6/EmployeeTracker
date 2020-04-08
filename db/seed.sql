@@ -11,8 +11,8 @@ USE employees_db;
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30),
-    PRIMARY KEY (id),
-)
+    PRIMARY KEY (id)
+);
 
 -- Role table. Has 4 columns; id(primary key), title, salary, and department id
 CREATE TABLE role (
@@ -21,7 +21,7 @@ CREATE TABLE role (
     salary DECIMAL,
     departmentID INT,
     PRIMARY KEY (id)
-)
+);
 
 -- Employee table. Has 5 columns; id(primary key), first name, last name, role id, and manager id.
 
@@ -32,4 +32,4 @@ CREATE TABLE employee (
     roleID INT,
     managerID INT,
     PRIMARY KEY (id)
-)
+);
