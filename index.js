@@ -49,7 +49,7 @@ function addToTable() {
         }
     })
         .then(response => {
-            console.log(response);
+            // console.log(response);
             return mainMenu();
         })
         .catch(error => {
@@ -165,6 +165,11 @@ function updateEmployee() {
     return inquirer.prompt(questions).then(({employeeID, roleID}) => {
         return data.updateEmployeeRole(employeeID, roleID);
     })
+    .then(response => {
+        // console.log(response);
+        mainMenu();
+    })
+    .catch(error => { console.log(error)});
 }
 
 mainMenu();
